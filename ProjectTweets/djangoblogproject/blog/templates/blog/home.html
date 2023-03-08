@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>Blog Homepage - {{ title }}</title>
+    {% else %}
+    <title></title>
+    {% endif %}
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.Title }}</h1>
+        <p>By {{ post.Author }} on {{ post.Date_posted }}</p>
+        <p>{{ post.Content }}</p>
+    {% endfor %}
+</body>
+</html>
